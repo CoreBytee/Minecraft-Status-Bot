@@ -1,0 +1,7 @@
+/bin/
+/deps/
+Config.lua
+Token.lua
+discordia.log
+gateway.json
+.replit
