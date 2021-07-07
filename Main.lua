@@ -14,6 +14,13 @@ local Colors = {
     Offline = 0xED4245
 }
 
+require('http').createServer(function (req, res)
+  local body = "Hello world\n"
+  res:setHeader("Content-Type", "text/plain")
+  res:setHeader("Content-Length", #body)
+  res:finish(body)
+end):listen(8080, '127.0.0.1')
+
 function Get()
     coroutine.wrap(
         function()
